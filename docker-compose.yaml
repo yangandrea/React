@@ -3,7 +3,7 @@ services:
     container_name: my_web
     user: ${MY_UID}:${MY_GID}
     build:
-      context: ./build
+      context: app/node_modules/@adobe/build
       dockerfile: Dockerfile.php
       args:
         UID: ${MY_UID}
@@ -17,7 +17,7 @@ services:
     container_name: my_mariadb
     user: ${MY_UID}:${MY_GID}
     build:
-      context: ./build
+      context: app/node_modules/@adobe/build
       dockerfile: Dockerfile.mariadb
       args:
         UID: ${MY_UID}
@@ -41,7 +41,7 @@ services:
     container_name: my_node
     user: ${MY_UID}:${MY_GID}
     build:
-      context: ./build
+      context: app/node_modules/@adobe/build
       dockerfile: Dockerfile.node
       args:
         UID: ${MY_UID}
